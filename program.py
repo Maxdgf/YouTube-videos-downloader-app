@@ -4,8 +4,6 @@ from pytube import YouTube
 import threading
 from tkinter import filedialog
 from random import randint
-from moviepy.editor import VideoFileClip, AudioFileClip
-import os
 
 
 root = tk.Tk()
@@ -14,7 +12,7 @@ root.geometry("800x900")
 root.geometry("+{}+{}".format(root.winfo_screenwidth()-900, 20))
 root.resizable(0, 0)
 root.configure(bg='cyan')
-root.iconbitmap('iconAI.ico')
+root.iconbitmap('icon.ico') # здесь иконка приложжения
 
 cv = ">скачивание видео со звуком(1)"
 vc = ">скачивание аудио из видео запущено"
