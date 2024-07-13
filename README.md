@@ -1,10 +1,12 @@
 # YouTube-videos-downloader-app
-Проект приложения загрузчика видео с YouTube на python
+The project of the YouTube video downloader application in python
 
 ![процесс скачивания видео](demo.png)
 
-Программа может скачивать видео со звуком и извлекать звук из видео.
+The program can download videos with audio and extract audio from the video.
 
-Требования:
-1) tkinter library (pip install tkinter)
-2) pytube library (pip install pytube)
+Requirements:
+##
+    pip install tkinter
+##
+    pip install pytube
