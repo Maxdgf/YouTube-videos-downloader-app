@@ -5,7 +5,8 @@ The project of the YouTube video downloader application in python
 
 The program can download videos with audio and extract audio from the video.
 
-Requirements:
+<h3>Requirements:</h3>
+
 ##
     pip install tkinter
 ##
