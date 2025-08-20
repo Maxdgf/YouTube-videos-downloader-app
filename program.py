@@ -12,17 +12,17 @@ root.geometry("800x900")
 root.geometry("+{}+{}".format(root.winfo_screenwidth()-900, 20))
 root.resizable(0, 0)
 root.configure(bg='cyan')
-root.iconbitmap('icon.ico') # здесь иконка приложжения
+#root.iconbitmap('icon.ico') # your app icon. (Optional)
 
-cv = ">скачивание видео со звуком(1)"
-vc = ">скачивание аудио из видео запущено"
+cv = ">download video with sound(1)"
+vc = ">downloading audio from video started"
 ki = ">скачивание видео со звуком запущено(2)"
-an = "|_название видео_|=>"
-kl = "<в скором времени будет завершено"
-lk = "<аудио файл будет сохранён под названием(пример названия: audioYouTube896.mp3)"
-ik = "<видео файл будет сохранён под названием(пример названия: YouTubeVideoWithSound56.mp4)"
-warning = "!рекомендуем каждый раз очищать обозраватель данных!"
-error = "!ЕСЛИ ВИДЕО ДОЛГО НЕ СКАЧИВАЕТСЯ, ТО ПРОИЗОШЛА ОШИБКА ФИЛЬТРАЦИИ ПОТОКОВ!"
+an = "|_video name_|=>"
+kl = "<will be completed soon"
+lk = "<audio file will be saved under the name(example name: audioYouTube896.mp3)"
+ik = "<video file will be saved under the name(example name: YouTubeVideoWithSound56.mp4)"
+warning = "!we recommend clearing the data browser every time!"
+error = "!IF THE VIDEO DOESN'T DOWNLOAD FOR A LONG TIME, THEN THERE IS A STREAM FILTERING ERROR!"
 
 def clear_listbox():
     g.delete(0, 'end')
@@ -77,24 +77,24 @@ def download_audio(vid_url, save_path):
 
 
 Label(root, text="YouTube video downloader", font="Impact", bg="white").place(x=350, y=0)
-Label(root, text="Обозреватель процессов:", bg="white").place(x=320, y=35)
+Label(root, text="Process Explorer:", bg="white").place(x=320, y=35)
 g = Listbox(root, width=132, height=6)
 g.place(x=0, y=60)
 gg = Listbox(root, width=132, height=15)
 gg.place(x=0, y=650)
-Label(root, text="Скачивание видео со звуком(обычное качество)", bg="white").place(x=0, y=180)
-Label(root, text="Скачивание аудио из видео", bg="white").place(x=0, y=480)
+Label(root, text="Download video with sound (normal quality)", bg="white").place(x=0, y=180)
+Label(root, text="Download audio from video", bg="white").place(x=0, y=480)
 Button(root, text="Выйти", bg="red", width=5, command=Destroy_WINDOW).place(x=750, y=0)
 a = Entry(root, width=90)
 a.place(x=10, y=200)
 b = Entry(root, width=90)
 b.place(x=10, y=500)
-Button(root, text="скачать видео со звуком", width=21, bg="yellow", command=Download_from_YouTube).place(x=600, y=200)
-Button(root, text="скачать аудио", width=20, bg="yellow", command=Download_AUdio).place(x=600, y=500)
-Button(root, text="Вставить из буфера обмена", width=25, bg="orange", command=paste_text).place(x=600, y=240)
-Button(root, text="Вставить из буфера обмена", width=25, bg="orange", command=paste_text_two).place(x=600, y=540)
-Button(root, text="очистить", width=15, bg="red", command=clear_listbox).place(x=500, y=30)
-Label(root, text="version 1.0").place(x=0, y=0)
-Label(root, text="скачанные видео и аудио:", bg='white').place(x=320, y=625)
+Button(root, text="download video with sound", width=21, bg="yellow", command=Download_from_YouTube).place(x=600, y=200)
+Button(root, text="download audio", width=20, bg="yellow", command=Download_AUdio).place(x=600, y=500)
+Button(root, text="Paste from clipboard", width=25, bg="orange", command=paste_text).place(x=600, y=240)
+Button(root, text="Paste from clipboard", width=25, bg="orange", command=paste_text_two).place(x=600, y=540)
+Button(root, text="Clear", width=15, bg="red", command=clear_listbox).place(x=500, y=30)
+Label(root, text="version 1.0").place(x=0, y=0) #optional part ;)
+Label(root, text="Downloaded media:", bg='white').place(x=320, y=625)
 
 root.mainloop()
